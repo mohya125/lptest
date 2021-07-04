@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------
+BASE
+----------------------------------------------------------- */
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #1a1a1a url("../images/bg.png") no-repeat fixed left bottom;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Raleway, "Hiragino Kaku Gothic PronN", Meiryo, sans-serif;
+  overflow-wrap: normal;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------
+PARTS
+----------------------------------------------------------- */
+.heading {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 15px;
+  padding-bottom: 15px;
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+.heading::before,
+.heading::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #999;
+}
+.heading::before {
+  bottom: 5px
+}
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #ae9e77;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button-showy {
+  background-color: #f1b400;
+}
+.buttons .button {
+  margin: 10px;
+}
+
+/* -----------------------------------------------------------
+HEADER
+----------------------------------------------------------- */
+.header {
+  padding: 120px 30px 90px;
+}
+.site-title {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+.site-title-sub::before,
+.site-title-sub::after {
+  content: "";
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.site-title {
+  margin: 50px 0 40px;
+  font-size: 7.6rem;
+}
+.site-description {
+  margin-bottom: 50px;
+  color: #888;
+  font-size: 1.8rem;
+}
+
+/* -----------------------------------------------------------
+ABOUT
+----------------------------------------------------------- */
+.about {
+  padding: 80px 30px;
+  background-color: #fff;
+  color: #333;
+}
+.about-text {
+  margin: 50px 30px;
+  line-height: 2.5;
+  font-size: 1.5vmax;
+}
+
+/* -----------------------------------------------------------
+SERVICE
+----------------------------------------------------------- */
+.service {
+  padding: 80px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.service-wrapper {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+.service-box {
+  background: #333;
+  display: flex;
+  width: 100%;
+  margin: 10px 0px 120px;
+  padding: 30px 0px;
+  justify-content: center;
+  border-radius: 10px;
+}
+.service-box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.service-image {
+  display: block;
+  width: 55%;
+  object-fit: cover;
+  margin: 0 2.5% 0;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.service-text {
+  display: block;
+  width: 45%;
+  min-width: 300px;
+  margin: 0 2.5% 0;
+  padding-top: 20px;
+}
+.service-title {
+  font-family: "Yu Mincho" , serif;
+  font-weight: normal;
+  padding-top: 16px ;
+  font-size: 2.5vmax;
+}
+.service-text-info {
+  font-size: 1.4vmax;
+  line-height: 2.5;
+}
+
+/* -----------------------------------------------------------
+SALONS
+----------------------------------------------------------- */
+.salons {
+  background-color: #fff;
+  padding: 80px;
+  color: #333;
+}
+.salons-wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.salons-box, .salons-box-p, .salons-box-m{
+  background: rgb(236, 207, 207);
+  max-width: 250px;
+  height: 420px;
+  margin: 10px;
+  border-radius: 8px;
+}
+.salons-box-p {
+  background: rgb(196, 226, 220);
+}
+.salons-box-m {
+  background: rgb(187, 184, 217);
+}
+.salons-image {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+.salons-text {
+  display: flex;
+  flex-direction: column;
+}
+.salons-text-info {
+  line-height: 3.3rem;
+}
+.salons-box-p .salons-text-info {
+  line-height: 2.2rem;
+}
+.salons-text-title {
+  font-weight: normal;
+  font-size: 3.4rem;
+  line-height: 2.7rem;
+  padding-bottom: 18px;
+}
+
+
+/* -----------------------------------------------------------
+CONTACT
+----------------------------------------------------------- */
+.contact {
+  padding: 80px 0 150px;
+}
+.contact-form {
+  width: 50%;
+  margin: 50px auto 0;
+}
+.contact-form input[type=text],
+.contact-form input[type=mail],
+.contact-form textarea {
+  display: block;
+  width: 100%; 
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form input[type=text]:focus,
+.contact-form input[type=mail]:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.contact-form input[type=submit] {
+  display: block;
+  width: 200px;
+  margin: 40px auto 0;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* -----------------------------------------------------------
+FOOTER
+----------------------------------------------------------- */
+.footer {
+  padding: 12px 0;
+  font-size: 1.3rem;
+}
+
+/* -----------------------------------------------------------
+SMARTPHONE
+----------------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+  .service-box {
+    flex-flow: row wrap;
+  }
+  .service-image, .service-text {
+    width: 96%;
+  }
+}
+@media (min-width: 768px) {
+  .br-sp {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+  body {
+    font-size: 1.3rem;
+  }
+  .br-sp {
+    display: block;
+  }
+
+  /* -----HEADER----- */
+  .header {
+    padding-top: 60px;
+  }
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .site-description {
+    font-size: 1.5rem;
+  }
+  /* -----ABOUT----- */
+  .about-text {
+    margin: 25px;
+    font-size: 1.5vmax;
+    line-height: 1.8;
+  }
+  /* -----SERVICE----- */
+  .service-box {
+    margin: 0 0 60px;
+    padding: 15px;
+  }
+  .service-image {
+    margin: 0 10px;
+  }
+  .service-title {
+    font-weight: normal;
+    padding-top: 5px ;
+    font-size: 2.5rem;
+  }
+  .service-text-info {
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 0px 0px 20px;
+  }
+  /* -----SALONS----- */
+  .salons {
+    padding: 80px 40px;
+  }
+  .salons-box, .salons-box-p, .salons-box-m{
+    margin-bottom: 25px;
+  }
+  .salons-text-info {
+    font-size: 1.5rem;
+  }
+  /* -----CONTACT----- */
+  .contact-form {
+    width: 80%;
+  }
+  .contact {
+    padding-bottom: 80px;
+  }
+}
