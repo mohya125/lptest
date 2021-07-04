@@ -145,7 +145,6 @@ SERVICE
 .service-text {
   display: block;
   width: 45%;
-  min-width: 300px;
   margin: 0 2.5% 0;
   padding-top: 20px;
 }
@@ -321,10 +320,13 @@ SMARTPHONE
   /* -----ABOUT----- */
   .about-text {
     margin: 25px;
-    font-size: 1.5vmax;
+    font-size: 1.8vmax;
     line-height: 1.8;
   }
   /* -----SERVICE----- */
+  .service {
+    padding: 80px 40px;
+  }
   .service-box {
     margin: 0 0 60px;
     padding: 15px;
